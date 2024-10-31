@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>PARABÉNS!!</title>
+      <link rel="stylesheet" href="styles.css">
+      <script src="script.js" defer></script>
+      <style>
+            /* Botão */
+            button {
+                  background-color: #ffeb3b;
+                  color: #333;
+                  border: none;
+                  padding: 10px 20px;
+                  font-size: 18px;
+                  border-radius: 5px;
+                  cursor: pointer;
+                  margin: 20px 0;
+                  transition: background-color 0.3s;
+            }
+
+            button:hover {
+                  background-color: #e74c3c;
+                  color: #fff;
+            }
+      </style>
+</head>
+
+<body>
+      <nav>
+            <ul>
+                  <li><a href="inicio.html">Início</a></li>
+            </ul>
+      </nav>
+      <div class="container">
+            <h1>Carta para Minha Amada</h1>
+            <button id="scrollButton">Leia a Carta</button>
+            <div class="letter" id="conteudo" style="display: none;"> <!-- Ocultar a carta inicialmente -->
+                  <p>Querida,</p>
+                  <p>Hoje, só quero te agradecer por ser essa pessoa maravilhosa que é. Desde que você entrou na minha
+                        vida, tudo ganhou mais cor e alegria. A tua força me inspira todos os dias. Você enfrenta tudo
+                        com tanta garra e determinação, que não tem como eu não me sentir motivado ao teu lado.</p>
+                  <p>Você é leal como poucos. Em um mundo onde isso é raro, você brilha por ser essa parceira incrível e
+                        constante. Saber que posso contar contigo em qualquer situação é um conforto que não tem preço.
+                        Me sinto o cara mais sortudo do mundo por ter alguém como você ao meu lado.</p>
+                  <p>Tua gentileza e compaixão fazem do mundo um lugar melhor. Você tem um dom especial de ver o lado
+                        bom das pessoas e oferecer ajuda quando elas mais precisam. Cada momento contigo se torna uma
+                        lembrança preciosa e, por isso, sou muito grato.</p>
+                  <p>Te amo por quem você é e por tudo o que somos juntos. Seu amor me completa e me faz feliz de uma
+                        maneira que nunca pensei ser possível. Cada gesto seu, cada palavra, cada olhar... tudo em você
+                        me faz te amar mais e mais.</p>
+                  <p>Então, com todo o meu coração: <span class="highlight">Eu Te Amo</span>. Amo cada detalhe, cada
+                        momento e cada lembrança que criamos. Obrigado por ser você e por dividir tua vida comigo.</p>
+                  <p>Com todo o meu amor,</p>
+                  <p>Kauã</p>
+            </div>
+      </div>
+
+      <script>
+            // Mostrar a carta ao clicar no botão
+            document.getElementById('scrollButton').addEventListener('click', function () {
+                  const conteudo = document.getElementById('conteudo');
+                  conteudo.style.display = 'block'; // Mostrar a carta
+                  conteudo.scrollIntoView({ behavior: 'smooth' }); // Rolar suavemente para a carta
+            });
+      </script>
+</body>
+
+</html>

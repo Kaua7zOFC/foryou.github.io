@@ -1,0 +1,273 @@
+/* Estilos Globais */
+body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #3f0d12, #a71d31);
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      overflow: hidden;
+}
+
+/* Container da Carta */
+.container {
+      max-width: 600px;
+      margin: auto;
+      padding: 20px;
+      border-radius: 15px;
+      /* Bordas mais arredondadas */
+      background-color: rgba(255, 255, 255, 0.9);
+      /* Fundo levemente transparente */
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      /* Sombra mais suave */
+      backdrop-filter: blur(10px);
+      /* Efeito de desfoque */
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      /* Borda sutil */
+}
+
+/* Título */
+h1 {
+      text-align: center;
+      color: #ffeb3b;
+      /* Cor do título */
+      font-size: 3em;
+      /* Tamanho maior */
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+      /* Sombra para o título */
+      margin-bottom: 20px;
+      /* Espaçamento inferior */
+}
+
+/* Estilo dos Parágrafos */
+.letter p {
+      line-height: 1.7;
+      /* Espaçamento entre linhas */
+      margin: 15px 0;
+      /* Margem aumentada */
+      color: #333;
+      /* Cor do texto */
+      font-size: 1.1em;
+      /* Ajuste no tamanho */
+      position: relative;
+      /* Para efeito de destaque */
+}
+
+/* Destaque */
+.highlight {
+      color: #e74c3c;
+      /* Cor para o destaque */
+      font-weight: bold;
+      font-size: 1.3em;
+      /* Tamanho do destaque maior */
+      text-decoration: underline;
+      /* Sublinhado */
+}
+
+/* Navegação */
+
+nav ul {
+      list-style: none;
+      padding: 10px;
+      margin: 10px;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      /* Permite que os itens se movam para a próxima linha se necessário */
+}
+
+nav ul li {
+      margin: 10px 15px;
+}
+
+nav ul li a {
+      background: hsla(60, 1%, 23%, 0.308);
+      /* Fundo mais claro para links */
+      text-decoration: none;
+      color: #ffffff;
+      /* Texto escuro */
+      font-size: 18px;
+      font-weight: bold;
+      padding: 10px 20px;
+      border: 2px solid #ffeb3b;
+      border-radius: 25px;
+      /* Borda mais arredondada */
+      transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+      color: #fff;
+      /* Texto branco no hover */
+      background: #e74c3c;
+      /* Fundo vermelho no hover */
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(255, 235, 59, 0.5);
+      /* Sombra no hover */
+}
+
+/* Animações */
+@keyframes fadeInDown {
+      0% {
+            opacity: 0;
+            transform: translateY(-50px);
+      }
+
+      100% {
+            opacity: 1;
+            transform: translateY(0);
+      }
+}
+
+@keyframes fadeInUp {
+      0% {
+            opacity: 0;
+            transform: translateY(50px);
+      }
+
+      100% {
+            opacity: 1;
+            transform: translateY(0);
+      }
+}
+
+/* Media Query para Dispositivos Móveis */
+@media (max-width: 600px) {
+      nav ul {
+            flex-direction: column;
+            align-items: center;
+      }
+
+      nav ul li {
+            margin: 10px 0;
+      }
+
+      h1 {
+            font-size: 2.5em;
+            /* Ajustar o tamanho para telas pequenas */
+      }
+
+      .letter p {
+            font-size: 1em;
+            /* Ajustar o tamanho para telas pequenas */
+      }
+
+      .container {
+            padding: 15px;
+            /* Ajustar o padding em telas pequenas */
+      }
+}
+
+/* Centralização e integração do slideshow */
+.slideshow-container {
+      position: relative;
+      width: 80%;
+      max-width: 600px;
+      height: 400px;
+      margin: 0 auto;
+      overflow: hidden;
+      border-radius: 15px;
+      background-color: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Estilo para cada slide */
+.slide {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      transition: opacity 1s ease;
+      border-radius: 15px;
+}
+
+/* Slide ativo */
+.slide.active {
+      opacity: 1;
+}
+
+/* Títulos e parágrafos dentro do slideshow */
+.slideshow-container h1,
+.slideshow-container p {
+      color: #333;
+      font-weight: bold;
+      margin: 10px;
+      text-shadow: none;
+}
+
+.slideshow-container h1 {
+      color: #e74c3c;
+      font-size: 2.5em;
+      margin-bottom: 20px;
+}
+
+.slideshow-container p {
+      font-size: 1.1em;
+      color: #333;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+      .slideshow-container {
+            width: 90%;
+            height: 300px;
+      }
+}
+
+/* Estilo dos botões de navegação no carrossel */
+.slide-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      border: none;
+      padding: 10px;
+      font-size: 24px;
+      cursor: pointer;
+      border-radius: 5px;
+      z-index: 10;
+      transition: background-color 0.3s;
+}
+
+.slide-btn:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev-btn {
+      left: 10px;
+}
+
+.next-btn {
+      right: 10px;
+}
+
+
+/* Estilo do Contador */
+.time-counter {
+      text-align: center;
+      margin-top: 20px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.9);
+      color: #333;
+      font-size: 1.2em;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.time-counter h2 {
+      color: #e74c3c;
+      margin-bottom: 10px;
+}
+
+#counter {
+      font-weight: bold;
+      color: #3f0d12;
+}

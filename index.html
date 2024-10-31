@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Login</title>
+      <link rel="stylesheet" href="./pagina principal/styles.css">
+      <script>
+            function checkPassword() {
+                  const password = document.getElementById('password').value;
+                  const errorMessage = document.getElementById('error-message');
+                  const correctPassword = '181627/09'; // Substitua pela sua senha específica
+
+                  if (password === correctPassword) {
+                        window.location.href = './pagina principal/inicio.html'; // Substitua pelo nome da sua página principal
+                  } else {
+                        errorMessage.classList.remove('hidden');
+                  }
+            }
+
+      </script>
+
+      <style>
+            /* Estilos Globais */
+            body {
+                  font-family: 'Poppins', sans-serif;
+                  background: linear-gradient(135deg, #3f0d12, #a71d31);
+                  color: #fff;
+                  margin: 0;
+                  padding: 0;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  height: 100vh;
+            }
+
+            .login-container {
+                  background: rgba(0, 0, 0, 0.8);
+                  padding: 30px;
+                  border-radius: 10px;
+                  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                  text-align: center;
+            }
+
+            .login-container h1 {
+                  margin-bottom: 20px;
+            }
+
+            .login-container input {
+                  padding: 10px;
+                  border: none;
+                  border-radius: 5px;
+                  margin-bottom: 10px;
+                  width: calc(100% - 22px);
+                  /* Adjust width to account for padding and border */
+            }
+
+            .login-container button {
+                  padding: 10px 20px;
+                  border: none;
+                  border-radius: 5px;
+                  background-color: #ffeb3b;
+                  color: #3f0d12;
+                  font-weight: bold;
+                  cursor: pointer;
+                  transition: background-color 0.3s, transform 0.3s;
+            }
+
+            .login-container button:hover {
+                  background-color: #ffd700;
+                  transform: scale(1.05);
+            }
+
+            .hidden {
+                  display: none;
+            }
+
+            #error-message {
+                  color: red;
+                  margin-top: 10px;
+            }
+      </style>
+
+</head>
+
+<body>
+      <div class="login-container">
+            <h1>Acesso Restrito</h1>
+            <input type="password" id="password" placeholder="Digite a senha">
+            <button onclick="checkPassword()">Entrar</button>
+            <p id="error-message" class="hidden">Senha incorreta. Tente novamente.</p>
+      </div>
+</body>
+
+</html>
